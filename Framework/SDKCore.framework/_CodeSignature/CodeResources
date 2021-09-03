@@ -14,15 +14,19 @@
 		</data>
 		<key>Headers/SDKCore.h</key>
 		<data>
-		brZBUmfEjwKgno9F/Xh683b9qxQ=
+		+mYCFl5HLkS/EXsrX0wpU97ePmY=
+		</data>
+		<key>Headers/YHSDKOrderModel.h</key>
+		<data>
+		o4oSuB/APJmqNJqX7iUSzPYrY6A=
 		</data>
 		<key>Headers/YiHaoGamesSDK.h</key>
 		<data>
-		pLkvoX5Y1zmD7e6/ISZMGrX9B4E=
+		4NmLx9kDGcIYtN+w9VU9lXLmKQA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qNhSKq/N3RexXXWwvmWTQl8wVcU=
+		MnqquXxMnstHC2wxyUw52hu3nnw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -30,7 +34,7 @@
 		</data>
 		<key>PrivateHeaders/YHSDKUser.h</key>
 		<data>
-		B1JDKBtG0g2oYXrlJTtObY9Q00w=
+		YE4qXFx/Gfc7m5xtLacO+mEWoaU=
 		</data>
 		<key>build-universal-framework.sh</key>
 		<data>
@@ -65,22 +69,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			brZBUmfEjwKgno9F/Xh683b9qxQ=
+			+mYCFl5HLkS/EXsrX0wpU97ePmY=
 			</data>
 			<key>hash2</key>
 			<data>
-			vt+72Yb6Hz6R/PBGSxhLQ11JpazrRSr9+b1AVm+8tHU=
+			bntrWTniKQSAIbRFeUi+n0i4BnUdCuGuzNuQiWvXRhc=
+			</data>
+		</dict>
+		<key>Headers/YHSDKOrderModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			o4oSuB/APJmqNJqX7iUSzPYrY6A=
+			</data>
+			<key>hash2</key>
+			<data>
+			3RUDPB1nZM4Tbnggf504WMWYLw4qlx/fjO8T6Bheruc=
 			</data>
 		</dict>
 		<key>Headers/YiHaoGamesSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pLkvoX5Y1zmD7e6/ISZMGrX9B4E=
+			4NmLx9kDGcIYtN+w9VU9lXLmKQA=
 			</data>
 			<key>hash2</key>
 			<data>
-			Gl+IMPGrfLLFl3N97pBMRnhu5xUCRZ3VgvjpPdA4+Uk=
+			G2IiR5kAz4KZ3bHHLzIk7GCdzMVua7Viq+K5TJrndT4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -98,11 +113,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			B1JDKBtG0g2oYXrlJTtObY9Q00w=
+			YE4qXFx/Gfc7m5xtLacO+mEWoaU=
 			</data>
 			<key>hash2</key>
 			<data>
-			3UBf9hsc9uRu7ONQYxat5zhCXscmkoDUQ/Vwhbwej/I=
+			lBE1zdBzYgSdEVyDqUMWtZd/AgP04zV/phXaDoe/nRw=
 			</data>
 		</dict>
 		<key>build-universal-framework.sh</key>

@@ -26,6 +26,9 @@
 @property (copy, nonatomic) NSString * is_idcard;
 @property (copy, nonatomic) NSString * idcard_num;
 @property (copy, nonatomic) NSString * idcard_name;
+ 
+/// 是否弹出绑定手机界面 1是 0否
+@property (copy, nonatomic) NSString * show_bindphone;
 
 /// 是否完成login流程
 @property (assign, nonatomic) BOOL loginCompleted;
@@ -37,7 +40,6 @@
 @property (copy, nonatomic) NSString * time;
 @property (copy, nonatomic) NSString * sign;
 @property (copy, nonatomic) NSString * user_code;
-@property (copy, nonatomic) NSString * show_bindphone;
 @property (copy, nonatomic) NSString * float_url;
 @property (copy, nonatomic) NSString * float_show_now;
 @property (copy, nonatomic) NSString * is_reg;
