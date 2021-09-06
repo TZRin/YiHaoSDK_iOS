@@ -50,14 +50,14 @@ typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *ms
 
 /// 展示用户中心
 /// @param superview 你想在哪个view上显示
-/// @param closedBlock 关闭回调,覆盖注册
+/// @param closedBlock 关闭回调,会覆盖上次传入的block
 /// @param updatedBlock  用户信息更新回调,会覆盖上次传入的block,如果回调给您的值为nil，则说明用户登出
 - (void)showUserCenterOnSuperview:(UIView *)superview onClosed:(YHSDKUserCenterClosedBlock)closedBlock onUpdated:(YHSDKLoginCompleteBlock)updatedBlock;
 
-/// 清除本地用户数据,下次不再自动登录
-- (void)clearLocalUserData;
+/// 退出登录，并清除本地用户数据,下次不再自动登录
+- (void)logoutAndClearLocalUserData;
 
-/// 支付
+/// 创建支付
 /// @param model 参数模型
 /// @param completeBlock 结果回调
 - (void)purchaseWithModel:(YHSDKOrderModel *)model complete:(YHSDKPurchaseResultBlock)completeBlock;

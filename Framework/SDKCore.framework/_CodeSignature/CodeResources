@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/YiHaoGamesSDK.h</key>
 		<data>
-		4NmLx9kDGcIYtN+w9VU9lXLmKQA=
+		6mrPTXeb3daN7vo2PBHQYudQB3Y=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -91,11 +91,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4NmLx9kDGcIYtN+w9VU9lXLmKQA=
+			6mrPTXeb3daN7vo2PBHQYudQB3Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			G2IiR5kAz4KZ3bHHLzIk7GCdzMVua7Viq+K5TJrndT4=
+			1BurP4OYNOBD+s4HkakmwstSLfgLvhy70bTjiMoF22M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
