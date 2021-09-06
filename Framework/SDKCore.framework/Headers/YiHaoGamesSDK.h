@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "YHSDKOrderModel.h"
+#import "YHSDKBubbleView.h"
 
 //YHSDKPurchaseResultWebPay说明
 //用户去网页支付去了,需要配合checkPurchaseStatus接口完成流程
@@ -43,6 +44,12 @@ typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *ms
 /// @param completeBlock 完成时回调,会覆盖上次传入的block
 - (void)showStartScreen:(float)time logoSize:(CGSize)size superview:(UIView *)superview complete:(YHSDKStartScreenCompleteBlock)completeBlock;
 
+/// 获取悬浮窗
+/// @param superview  在哪个view上展示
+/// @param size  悬浮窗大小
+/// @param flag  是否开启自动算入safeArea,开启后刘海屏横屏模式下会算入safeArea的值,如果您传入的是uiwindow,建议启用
+- (YHSDKBubbleView *)showBubbleViewOnSuperview:(UIView *)superview bubbleSize:(CGSize)size enableAutoCalSafeArea:(BOOL)flag;
+
 /// 展示登录view
 /// @param superview  你想在哪个view上显示
 /// @param completeBlock 登录成功返回json,会覆盖上次传入的block
@@ -51,7 +58,7 @@ typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *ms
 /// 展示用户中心
 /// @param superview 你想在哪个view上显示
 /// @param closedBlock 关闭回调,会覆盖上次传入的block
-/// @param updatedBlock  用户信息更新回调,会覆盖上次传入的block,如果回调给您的值为nil，则说明用户登出
+/// @param updatedBlock  用户信息更新回调,会覆盖上次传入的block,如果回调给您的值为nil，则说明用户信息登出
 - (void)showUserCenterOnSuperview:(UIView *)superview onClosed:(YHSDKUserCenterClosedBlock)closedBlock onUpdated:(YHSDKLoginCompleteBlock)updatedBlock;
 
 /// 退出登录，并清除本地用户数据,下次不再自动登录

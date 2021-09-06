@@ -14,7 +14,11 @@
 		</data>
 		<key>Headers/SDKCore.h</key>
 		<data>
-		+mYCFl5HLkS/EXsrX0wpU97ePmY=
+		Cx/LCcRC9BWURp9fTMkcaLunGnI=
+		</data>
+		<key>Headers/YHSDKBubbleView.h</key>
+		<data>
+		D0XU7W80UT4PPc/089i6aPzslaQ=
 		</data>
 		<key>Headers/YHSDKOrderModel.h</key>
 		<data>
@@ -22,7 +26,7 @@
 		</data>
 		<key>Headers/YiHaoGamesSDK.h</key>
 		<data>
-		KsBpGnnPF+AKjYKN2khHh35Xw4Q=
+		muXx8K9h2Q3epoXr35VNjfqxcyk=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -69,11 +73,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+mYCFl5HLkS/EXsrX0wpU97ePmY=
+			Cx/LCcRC9BWURp9fTMkcaLunGnI=
 			</data>
 			<key>hash2</key>
 			<data>
-			bntrWTniKQSAIbRFeUi+n0i4BnUdCuGuzNuQiWvXRhc=
+			x+6E+K6aDa6mHlPiRLhDltu40OejGKYJM7UJ8wohD90=
+			</data>
+		</dict>
+		<key>Headers/YHSDKBubbleView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			D0XU7W80UT4PPc/089i6aPzslaQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			FaE5HR2MOTwyncUfcFPqzLr6f80Fto+Ni4jvBC2WT1Q=
 			</data>
 		</dict>
 		<key>Headers/YHSDKOrderModel.h</key>
@@ -91,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KsBpGnnPF+AKjYKN2khHh35Xw4Q=
+			muXx8K9h2Q3epoXr35VNjfqxcyk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q6VKee6QpnLIm4cnCaBV9tDX/YPRM4Qo3NpCMwR/QF4=
+			hDQm/XfWj/1ZRrAxG3zOtBUhfN6SRDQjY3X8XeNCGMo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

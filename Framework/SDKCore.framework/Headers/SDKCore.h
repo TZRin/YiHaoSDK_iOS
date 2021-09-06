@@ -15,4 +15,6 @@ FOUNDATION_EXPORT const unsigned char SDKCoreVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SDKCore/PublicHeader.h>
 #import <SDKCore/YiHaoGamesSDK.h>
-#import <SDKCore/YHSDKOrderModel.h> 
+#import <SDKCore/YHSDKOrderModel.h>
+#import <SDKCore/YHSDKBubbleView.h>
+
