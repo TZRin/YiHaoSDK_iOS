@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-                    一号SDK iOS v1
+                    一号SDK iOS v1a
                    DESC
 
   spec.homepage     = "https://github.com/TZRin/YiHaoSDK_iOS"
@@ -119,7 +119,7 @@ Pod::Spec.new do |spec|
 
   # spec.framework  = "SomeFramework"
   
-spec.frameworks = 'UIKit','Foundation','Photos','CoreText','CoreTelephony','AdSupport','SystemConfiguration','StoreKit'
+spec.frameworks = 'UIKit','Foundation','Photos','CoreText','CoreTelephony','AdSupport','SystemConfiguration','StoreKit','Security','XMCommon','XMGame','XMLog'
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
@@ -133,7 +133,7 @@ spec.frameworks = 'UIKit','Foundation','Photos','CoreText','CoreTelephony','AdSu
 
 spec.requires_arc = true
 spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' ,'ENABLE_BITCODE' => 'NO' ,'OTHER_LDFLAGS' => '-lObjC'}
  
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
