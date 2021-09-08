@@ -133,7 +133,7 @@ spec.frameworks = 'UIKit','Foundation','Photos','CoreText','CoreTelephony','AdSu
 
 spec.requires_arc = true
 spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
-spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',ENABLE_BITCODE = NO,'OTHER_LDFLAGS' => '-lObjC'}
+spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64','ENABLE_BITCODE' => 'NO','OTHER_LDFLAGS' => '-lObjC'}
  
 spec.vendored_frameworks = 'Framework/SDKCore.framework'
   
