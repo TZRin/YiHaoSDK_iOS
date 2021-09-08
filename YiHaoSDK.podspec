@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YiHaoSDK"
-  spec.version      = "1.0.4"
+  spec.version      = "1.0.5"
   spec.summary      = "YiHaoSDK iOS"
 
   # This description is used to generate tags and improve search results.
@@ -119,7 +119,7 @@ Pod::Spec.new do |spec|
 
   # spec.framework  = "SomeFramework"
   
-spec.frameworks = 'UIKit','Foundation','Photos','CoreText','CoreTelephony','AdSupport','SystemConfiguration','StoreKit'
+spec.frameworks = 'UIKit','Foundation','Photos','CoreText','CoreTelephony','AdSupport','SystemConfiguration','StoreKit','Security','XMCommon','XMGame','XMLog'
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
@@ -132,11 +132,9 @@ spec.frameworks = 'UIKit','Foundation','Photos','CoreText','CoreTelephony','AdSu
   #  you can include multiple dependencies to ensure it works.
 
 spec.requires_arc = true
-spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',ENABLE_BITCODE = NO,'OTHER_LDFLAGS' => '-lObjC'}
  
-  # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-
 spec.vendored_frameworks = 'Framework/SDKCore.framework'
   
 spec.dependency "AFNetworking"
