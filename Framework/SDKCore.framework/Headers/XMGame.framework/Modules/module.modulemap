@@ -1,6 +1,0 @@
-framework module XMGame {
-  umbrella header "XMGame.h"
-
-  export *
-  module * { export * }
-}

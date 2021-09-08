@@ -8,9 +8,7 @@
 #import <Foundation/Foundation.h>
  
 @interface YHSDKUser : NSObject
-
-//1是 0否
-
+ 
 @property (copy, nonatomic) NSString * phone;
 @property (copy, nonatomic) NSString * account;
 @property (copy, nonatomic) NSString * password;
@@ -30,9 +28,6 @@
 /// 是否弹出绑定手机界面 1是 0否
 @property (copy, nonatomic) NSString * show_bindphone;
 
-/// 是否完成login流程
-@property (assign, nonatomic) BOOL loginCompleted;
-
 /// 原始json返回数据,不是最新
 @property (strong, nonatomic) id oriData;
 
@@ -49,5 +44,8 @@
 
 /// 是否弹出验证身份证
 @property (copy, nonatomic) NSString * show_check_idcard;
+
+/// 本地记录的登录时间戳
+@property (assign, nonatomic) NSString * loginTS;
 
 @end 

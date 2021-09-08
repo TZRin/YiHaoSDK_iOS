@@ -1,6 +1,0 @@
-framework module XMLog {
-  umbrella header "XMLog.h"
-
-  export *
-  module * { export * }
-}

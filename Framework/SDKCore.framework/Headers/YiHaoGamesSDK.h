@@ -33,10 +33,10 @@ typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *ms
 
 + (YiHaoGamesSDK *)sharedSDK;
 
-/// 设置gameID
-/// @param gameID 目标游戏id
-- (void)setGameID:(NSString *)gameID;
-
+/// 激活SDK
+/// @param gameID  游戏id 咨询相关产品负责⼈
+- (void)activationSDKWithGameID:(NSString *)gameID;
+ 
 /// 显示启动logo闪屏
 /// @param time 持续时间,传入0为默认时间4秒
 /// @param size logo大小 传入CGSizeZero显示默认大小
@@ -61,8 +61,8 @@ typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *ms
 /// @param updatedBlock  用户信息更新回调,会覆盖上次传入的block,如果回调给您的值为nil，则说明用户信息登出
 - (void)showUserCenterOnSuperview:(UIView *)superview onClosed:(YHSDKUserCenterClosedBlock)closedBlock onUpdated:(YHSDKLoginCompleteBlock)updatedBlock;
 
-/// 退出登录，并清除本地用户数据,下次不再自动登录
-- (void)logoutAndClearLocalUserData;
+/// 退出登录
+- (void)logout;
 
 /// 创建支付
 /// @param model 参数模型
@@ -76,5 +76,6 @@ typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *ms
 /// @param model 待检测的参数模型
 /// @param resultBlock 结果回调
 - (void)checkPurchaseStatusWithModel:(YHSDKOrderModel *)model result:(YHSDKPurchaseResultBlock)resultBlock;
+ 
 
 @end
