@@ -17,4 +17,7 @@ FOUNDATION_EXPORT const unsigned char SDKCoreVersionString[];
 #import <SDKCore/YiHaoGamesSDK.h>
 #import <SDKCore/YHSDKOrderModel.h>
 #import <SDKCore/YHSDKBubbleView.h>
+#import <SDKCore/YHSDKConfig_XMSDK.h>
+#import <SDKCore/YHSDKConfig.h>
+ 
 

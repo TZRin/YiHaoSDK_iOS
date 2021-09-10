@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "YHSDKOrderModel.h"
 #import "YHSDKBubbleView.h"
+#import "YHSDKConfig.h"
 
 //YHSDKPurchaseResultWebPay说明
 //用户去网页支付去了,需要配合checkPurchaseStatus接口完成流程
@@ -35,7 +36,8 @@ typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *ms
 
 /// 激活SDK
 /// @param gameID  游戏id 咨询相关产品负责⼈
-- (void)activationSDKWithGameID:(NSString *)gameID;
+/// @param configs 待加载模块的配置
+- (void)activationSDKWithGameID:(NSString *)gameID otherSDKConfig:(NSSet <YHSDKConfig *>*)configs;
  
 /// 显示启动logo闪屏
 /// @param time 持续时间,传入0为默认时间4秒
