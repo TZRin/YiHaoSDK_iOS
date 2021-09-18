@@ -73,9 +73,9 @@ typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *ms
 
 /// 检测支付是否完成
 /// 例如，包含：已完成支付，支付遇到问题，等功能的按钮。
-/// 用户点击已完成支付，ios开发人员调用本函数检查是否完成支付
+/// 用户点击已完成支付，iOS开发人员调用本函数检查是否完成支付
 /// 如果在web支付的流程，app跳至浏览器之前，需要开发人员在本身app中显示提示页面
-/// @param model 待检测的参数模型
+/// @param model 待检测的参数模型,需要填写our_tradeNO字段值
 /// @param resultBlock 结果回调
 - (void)checkPurchaseStatusWithModel:(YHSDKOrderModel *)model result:(YHSDKPurchaseResultBlock)resultBlock;
  
