@@ -4,7 +4,7 @@
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
+#  pod trunk push ./YiHaoSDK.podspec --allow-warnings
 
 Pod::Spec.new do |spec|
 
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YiHaoSDK"
-  spec.version      = "1.1.1"
+  spec.version      = "1.1.2"
   spec.summary      = "YiHaoSDK iOS"
 
   # This description is used to generate tags and improve search results.

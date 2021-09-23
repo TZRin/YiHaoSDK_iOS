@@ -11,15 +11,14 @@
 #import "YHSDKBubbleView.h"
 #import "YHSDKConfig.h"
 
-//YHSDKPurchaseResultWebPay说明
-//用户去网页支付去了,需要配合checkPurchaseStatus接口完成流程
+//YHSDKPurchaseResultWYPay说明 需要配合checkPurchaseStatus接口完成流程
 typedef enum YHSDKPurchaseResult {
     YHSDKPurchaseResultUnknown      = 0,//未知
     YHSDKPurchaseResultSuccess      = 1,
     YHSDKPurchaseResultFailure      = 2,
     YHSDKPurchaseResultPurchased    = 3,
     YHSDKPurchaseResultNotAuth      = 4,//用户没授权内购
-    YHSDKPurchaseResultWebPay       = 5,//见上方说明
+    YHSDKPurchaseResultWYPay        = 5,//见上方说明
     YHSDKPurchaseResultNAProducts   = 6,//拉取苹果商品信息失败
     YHSDKPurchaseResultNOProducts   = 7 //没有找到对应商品
 }YHSDKPurchaseResult;
@@ -72,9 +71,9 @@ typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *ms
 - (void)purchaseWithModel:(YHSDKOrderModel *)model complete:(YHSDKPurchaseResultBlock)completeBlock;
 
 /// 检测支付是否完成
-/// 例如，包含：已完成支付，支付遇到问题，等功能的按钮。
-/// 用户点击已完成支付，iOS开发人员调用本函数检查是否完成支付
-/// 如果在web支付的流程，app跳至浏览器之前，需要开发人员在本身app中显示提示页面
+/// 例如，WY包含：已完成支付，支付遇到问题，等功能的按钮。
+/// 用户点击已完成支付，iOS开发人员调用本方法检查是否完成支付
+/// 如果在WY支付的流程，app至WY之前，需要开发人员在本身app中显示提示页面
 /// @param model 待检测的参数模型,需要填写our_tradeNO字段值
 /// @param resultBlock 结果回调
 - (void)checkPurchaseStatusWithModel:(YHSDKOrderModel *)model result:(YHSDKPurchaseResultBlock)resultBlock;
