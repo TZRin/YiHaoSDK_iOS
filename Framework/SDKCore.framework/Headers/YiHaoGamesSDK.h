@@ -34,7 +34,7 @@ typedef void (^YHSDKStartScreenCompleteBlock)(void);
 typedef void (^YHSDKLoginCompleteBlock)(id userData);
 typedef void (^YHSDKUserCenterClosedBlock)(void);
 typedef void (^YHSDKUserInfoUpdatedBlock)(id userData);
-typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *msg,YHSDKOrderModel * orderInfoModel);
+typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *msg,YHSDKOrderModel * orderInfoModel,NSMutableDictionary *userInfo);
 typedef void (^YHSDKAntiAddictionResultBlock)(YHSDKAntiAddictionResult result,NSString *account);
 
 @interface YiHaoGamesSDK : NSObject
