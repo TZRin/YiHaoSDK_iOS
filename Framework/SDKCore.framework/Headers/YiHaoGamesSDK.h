@@ -11,6 +11,12 @@
 #import "YHSDKBubbleView.h"
 #import "YHSDKConfig.h"
 
+typedef enum YHSDKAntiAddictionResult {
+    YHSDKAntiAddictionResultBlocked     = 0,//不能玩了
+    YHSDKAntiAddictionResultPassed      = 1,//可以玩
+    YHSDKAntiAddictionResultForceLogout = 2 //强制登出
+}YHSDKAntiAddictionResult;
+
 //YHSDKPurchaseResultWYPay说明 需要配合checkPurchaseStatus接口完成流程
 typedef enum YHSDKPurchaseResult {
     YHSDKPurchaseResultUnknown      = 0,//未知
@@ -29,6 +35,7 @@ typedef void (^YHSDKLoginCompleteBlock)(id userData);
 typedef void (^YHSDKUserCenterClosedBlock)(void);
 typedef void (^YHSDKUserInfoUpdatedBlock)(id userData);
 typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *msg,YHSDKOrderModel * orderInfoModel);
+typedef void (^YHSDKAntiAddictionResultBlock)(YHSDKAntiAddictionResult result,NSString *account);
 
 @interface YiHaoGamesSDK : NSObject
 
@@ -54,13 +61,13 @@ typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *ms
 
 /// 展示登录view
 /// @param superview  你想在哪个view上显示
-/// @param completeBlock 登录成功返回json,会覆盖上次传入的block
+/// @param completeBlock 登录成功返回json,回调后将会被置空
 - (void)showLoginOnSuperview:(UIView *)superview complete:(YHSDKLoginCompleteBlock)completeBlock;
 
 /// 展示用户中心
 /// @param superview 你想在哪个view上显示
-/// @param closedBlock 关闭回调,会覆盖上次传入的block
-/// @param updatedBlock  用户信息更新回调,会覆盖上次传入的block,如果回调给您的值为nil，则说明用户信息登出
+/// @param closedBlock 关闭回调,回调后将会被置空
+/// @param updatedBlock  用户信息更新回调,如果回调给您的值为nil，则说明用户信息登出
 - (void)showUserCenterOnSuperview:(UIView *)superview onClosed:(YHSDKUserCenterClosedBlock)closedBlock onUpdated:(YHSDKLoginCompleteBlock)updatedBlock;
 
 /// 退出登录
@@ -79,5 +86,11 @@ typedef void (^YHSDKPurchaseResultBlock)(YHSDKPurchaseResult result,NSString *ms
 /// @param resultBlock 结果回调
 - (void)checkPurchaseStatusWithModel:(YHSDKOrderModel *)model result:(YHSDKPurchaseResultBlock)resultBlock;
  
+/// 不使用sdk自带的hud，开启后需要手动处理hud的显示
+@property (assign, nonatomic) BOOL disableSDKHUD;
+
+/// 检测防沉迷状态
+/// @param resultBlock 结果回调
+- (void)listenAntiAddictionDetectionWithBlock:(YHSDKAntiAddictionResultBlock)resultBlock;
 
 @end

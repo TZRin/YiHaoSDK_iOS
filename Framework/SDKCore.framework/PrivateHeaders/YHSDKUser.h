@@ -48,4 +48,19 @@
 /// 本地记录的登录时间戳
 @property (assign, nonatomic) NSString * loginTS;
 
+/// "是否开启心跳：0不开启，1开启"
+@property (copy, nonatomic) NSString * is_open_heartbeat;
+
+/// 每次心跳相隔多少秒
+@property (copy, nonatomic) NSString * heartbeat_sec;
+
+/// 实名完成后是否弹
+@property (copy, nonatomic) NSString * is_open_win;
+
+/// 实名完成后弹窗的话显示的文本
+@property (copy, nonatomic) NSString * open_win_msg;
+
+/// 实名完成后弹窗的话,点击弹窗的确认是否登出
+@property (copy, nonatomic) NSString * open_win_is_logout;
+
 @end 
