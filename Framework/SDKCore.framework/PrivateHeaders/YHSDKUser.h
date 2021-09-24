@@ -39,6 +39,9 @@
 @property (copy, nonatomic) NSString * float_show_now;
 @property (copy, nonatomic) NSString * is_reg;
 
+/// 是否悬浮窗展示
+@property (copy, nonatomic) NSString * is_show_float;
+
 /// 是否弹出游客密码信息 1是 0否
 @property (copy, nonatomic) NSString * show_userinfo;
 
