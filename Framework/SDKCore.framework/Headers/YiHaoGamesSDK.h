@@ -59,6 +59,9 @@ typedef void (^YHSDKAntiAddictionResultBlock)(YHSDKAntiAddictionResult result,NS
 /// @param flag  是否开启自动算入safeArea,开启后刘海屏横屏模式下会算入safeArea的值,如果您传入的是uiwindow,建议启用
 - (YHSDKBubbleView *)showBubbleViewOnSuperview:(UIView *)superview bubbleSize:(CGSize)size enableAutoCalSafeArea:(BOOL)flag;
 
+/// 不使用sdk自带的hud，开启后需要手动处理hud的显示
+@property (assign, nonatomic) BOOL disableSDKHUD;
+
 /// 展示登录view
 /// @param superview  你想在哪个view上显示
 /// @param completeBlock 登录成功返回json,回调后将会被置空
@@ -73,6 +76,10 @@ typedef void (^YHSDKAntiAddictionResultBlock)(YHSDKAntiAddictionResult result,NS
 /// 退出登录
 - (void)logout;
 
+/// 检测防沉迷状态
+/// @param resultBlock 结果回调
+- (void)listenAntiAddictionDetectionWithBlock:(YHSDKAntiAddictionResultBlock)resultBlock;
+
 /// 创建支付
 /// @param model 参数模型
 /// @param completeBlock 结果回调
@@ -86,11 +93,4 @@ typedef void (^YHSDKAntiAddictionResultBlock)(YHSDKAntiAddictionResult result,NS
 /// @param resultBlock 结果回调
 - (void)checkPurchaseStatusWithModel:(YHSDKOrderModel *)model result:(YHSDKPurchaseResultBlock)resultBlock;
  
-/// 不使用sdk自带的hud，开启后需要手动处理hud的显示
-@property (assign, nonatomic) BOOL disableSDKHUD;
-
-/// 检测防沉迷状态
-/// @param resultBlock 结果回调
-- (void)listenAntiAddictionDetectionWithBlock:(YHSDKAntiAddictionResultBlock)resultBlock;
-
 @end
