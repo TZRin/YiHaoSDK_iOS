@@ -22,7 +22,7 @@ typedef enum YHSDKPurchaseResult {
     YHSDKPurchaseResultUnknown      = 0,//未知
     YHSDKPurchaseResultSuccess      = 1,
     YHSDKPurchaseResultFailure      = 2,
-    YHSDKPurchaseResultPurchased    = 3,
+    YHSDKPurchaseResultPurchased    = 3,//已经购买过了
     YHSDKPurchaseResultNotAuth      = 4,//用户没授权内购
     YHSDKPurchaseResultWYPay        = 5,//见上方说明
     YHSDKPurchaseResultNAProducts   = 6,//拉取苹果商品信息失败
