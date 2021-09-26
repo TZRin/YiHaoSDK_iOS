@@ -27,7 +27,6 @@ typedef enum YHSDKPurchaseResult {
     YHSDKPurchaseResultWYPay        = 5,//见上方说明
     YHSDKPurchaseResultNAProducts   = 6,//拉取苹果商品信息失败
     YHSDKPurchaseResultNOProducts   = 7,//没有找到对应商品
-    YHSDKPurchaseResultLostTradeNO  = 8 //支付成功,但订单号丢失
 }YHSDKPurchaseResult;
 
 typedef void (^YHSDKStartScreenCompleteBlock)(void);
