@@ -30,7 +30,7 @@ typedef enum YHSDKPurchaseResult {
     YHSDKPurchaseResultNeedRetry    = 8 //有订单没处理完，需要等待其处理完毕后重试购买
 }YHSDKPurchaseResult;
 
-typedef void (^YHSDKStartScreenCompleteBlock)(void);
+typedef void (^YHSDKScreenCompleteBlock)(void);
 typedef void (^YHSDKLoginCompleteBlock)(id userData);
 typedef void (^YHSDKUserCenterClosedBlock)(void);
 typedef void (^YHSDKUserInfoUpdatedBlock)(id userData);
@@ -46,20 +46,30 @@ typedef void (^YHSDKAntiAddictionResultBlock)(YHSDKAntiAddictionResult result,NS
 /// @param configs 待加载模块的配置
 - (void)activationSDKWithGameID:(NSString *)gameID otherSDKConfig:(NSSet <YHSDKConfig *>*)configs;
  
-/// 显示启动logo闪屏
+/// 显示启动logo页面
 /// @param time 持续时间,传入0为默认时间4秒
 /// @param size logo大小 传入CGSizeZero显示默认大小
 /// @param superview 你想在哪个view上显示
 /// @param completeBlock 完成时回调,会覆盖上次传入的block
-- (void)showStartScreen:(float)time logoSize:(CGSize)size superview:(UIView *)superview complete:(YHSDKStartScreenCompleteBlock)completeBlock;
+/// @param animate 是否动画
+- (void)showStartScreen:(float)time logoSize:(CGSize)size superview:(UIView *)superview animate:(BOOL)animate complete:(YHSDKScreenCompleteBlock)completeBlock;
 
-/// 获取悬浮窗
-/// @param superview  在哪个view上展示
-/// @param size  悬浮窗大小
-/// @param flag  是否开启自动算入safeArea,开启后刘海屏横屏模式下会算入safeArea的值,如果您传入的是uiwindow,建议启用
-- (YHSDKBubbleView *)showBubbleViewOnSuperview:(UIView *)superview bubbleSize:(CGSize)size enableAutoCalSafeArea:(BOOL)flag;
+/// 显示健康游戏忠告
+/// @param time 持续时间,传入0为默认时间4秒
+/// @param superview 你想在哪个view上显示
+/// @param completeBlock 完成时回调,会覆盖上次传入的block
+/// @param animate 是否动画
+- (void)showAdviceScreen:(float)time superview:(UIView *)superview animate:(BOOL)animate complete:(YHSDKScreenCompleteBlock)completeBlock;
 
-/// 不使用sdk自带的hud，开启后需要手动处理hud的显示
+/// 创建一个悬浮窗
+/// @param  superview  在哪个view上展示
+/// @param  size  悬浮窗大小
+/// @param  flag  是否开启自动算入safeArea,开启后刘海屏横屏模式下会算入safeArea的值,如果您传入的是uiwindow,建议启用
+/// @param  removeOnLogout 当调用退出登录时,会自动移除掉
+/// @return 悬浮窗对象
+- (YHSDKBubbleView *)showBubbleViewOnSuperview:(UIView *)superview bubbleSize:(CGSize)size enableAutoCalSafeArea:(BOOL)flag removeOnLogout:(BOOL)removeOnLogout;
+ 
+/// 禁用sdk支付模块api中的hud
 @property (assign, nonatomic) BOOL disableSDKHUD;
 
 /// 展示登录view
