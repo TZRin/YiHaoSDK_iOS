@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YiHaoSDK"
-  spec.version      = "1.2.6"
+  spec.version      = "1.2.7"
   spec.summary      = "YiHaoSDK iOS"
 
   # This description is used to generate tags and improve search results.
@@ -137,13 +137,13 @@ spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' 
  
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
-spec.vendored_frameworks = ['Framework/SDKCore.framework','Framework/XMCommon.framework','Framework/XMGame.framework','Framework/XMLog.framework']
+spec.vendored_frameworks = ['Framework/SDKCore.framework','Framework/XMCommon.framework','Framework/XMGame.framework','Framework/XMLog.framework','Framework/Bugly.framework']
 
 
 spec.dependency "AFNetworking"
 spec.dependency "Masonry"
 spec.dependency "SVProgressHUD"
 spec.dependency "IQKeyboardManager"
-spec.dependency "MJExtension"
+spec.dependency "MJExtension" 
 
 end

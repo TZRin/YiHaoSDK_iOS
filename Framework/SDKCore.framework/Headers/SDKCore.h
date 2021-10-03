@@ -19,5 +19,6 @@ FOUNDATION_EXPORT const unsigned char SDKCoreVersionString[];
 #import <SDKCore/YHSDKBubbleView.h>
 #import <SDKCore/YHSDKConfig_XMSDK.h>
 #import <SDKCore/YHSDKConfig.h>
+#import <SDKCore/YHSDKReportInfo.h>
  
 

@@ -10,12 +10,21 @@
 #import "YHSDKOrderModel.h"
 #import "YHSDKBubbleView.h"
 #import "YHSDKConfig.h"
+#import "YHSDKReportInfo.h"
 
 typedef enum YHSDKAntiAddictionResult {
     YHSDKAntiAddictionResultBlocked     = 0,//不能玩了
     YHSDKAntiAddictionResultPassed      = 1,//可以玩
     YHSDKAntiAddictionResultForceLogout = 2 //强制登出
 }YHSDKAntiAddictionResult;
+
+typedef enum YHSDKReportType {
+    YHSDKReportTypePlaceHolder        = 0,
+    YHSDKReportTypeCreateRole         = 1,//创建角色上报
+    YHSDKReportTypeRoleLogin          = 2,//角色登陆成功上报
+    YHSDKReportTypeRoleLogout         = 3 //角色成功登出上报
+}YHSDKReportType;
+
 
 //YHSDKPurchaseResultWYPay说明 需要配合checkPurchaseStatus接口完成流程
 typedef enum YHSDKPurchaseResult {
@@ -102,5 +111,10 @@ typedef void (^YHSDKAntiAddictionResultBlock)(YHSDKAntiAddictionResult result,NS
 /// @param model 待检测的参数模型,需要填写our_tradeNO字段值
 /// @param resultBlock 结果回调
 - (void)checkPurchaseStatusWithModel:(YHSDKOrderModel *)model result:(YHSDKPurchaseResultBlock)resultBlock;
+
+/// 上报信息,如角色成功登陆/登出/创建等，只传递当前类型您有且能与参数模型对应的数据，其余数据字段可不传
+/// @param info 数据模型
+/// @param type 上报类型
+- (void)uploadPlayerInfo:(YHSDKReportInfo *)info type:(YHSDKReportType)type;
  
 @end
