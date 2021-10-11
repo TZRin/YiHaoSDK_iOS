@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/SDKCore.h</key>
 		<data>
-		uHQ5rklBjHOitSohK/TM4Xhy0Qg=
+		leJ8/ITLtRqsuqcmAtJLY+53OWQ=
 		</data>
 		<key>Headers/YHSDKBubbleView.h</key>
 		<data>
@@ -32,9 +32,13 @@
 		<data>
 		o4oSuB/APJmqNJqX7iUSzPYrY6A=
 		</data>
+		<key>Headers/YHSDKReportInfo.h</key>
+		<data>
+		KGFzLmOeAeHJp0gxQ59uUH42UnM=
+		</data>
 		<key>Headers/YiHaoGamesSDK.h</key>
 		<data>
-		rAE5LvyJIRv2I4dACfRMfKQw4LE=
+		0N6Igs+oVB/ChBIbHwLWOVrwwf4=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -81,11 +85,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uHQ5rklBjHOitSohK/TM4Xhy0Qg=
+			leJ8/ITLtRqsuqcmAtJLY+53OWQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			KSUku2H9xejUJf65ZQLS78rpWqaQEf5YfK6hl+JNDZM=
+			Y+PtdCGjmhPiheHPuWNN+swd3dRxZ9qOSn/Ihvhs/Ao=
 			</data>
 		</dict>
 		<key>Headers/YHSDKBubbleView.h</key>
@@ -132,15 +136,26 @@
 			3RUDPB1nZM4Tbnggf504WMWYLw4qlx/fjO8T6Bheruc=
 			</data>
 		</dict>
+		<key>Headers/YHSDKReportInfo.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KGFzLmOeAeHJp0gxQ59uUH42UnM=
+			</data>
+			<key>hash2</key>
+			<data>
+			i+X8fk6MrXLxvpW+QBfjqWkrWjv7k93OWKZeFnEUoSU=
+			</data>
+		</dict>
 		<key>Headers/YiHaoGamesSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rAE5LvyJIRv2I4dACfRMfKQw4LE=
+			0N6Igs+oVB/ChBIbHwLWOVrwwf4=
 			</data>
 			<key>hash2</key>
 			<data>
-			CdJD0k8rDx3eFvMS9EP0Cf05l3IfISCzSrX1QdbCaj0=
+			P0wtIeArEhfS8qkv6NlDGbnHh8awd9RFypd/IBDNdxs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
