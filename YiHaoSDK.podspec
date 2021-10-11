@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YiHaoSDK"
-  spec.version      = "1.2.6"
+  spec.version      = "1.2.8"
   spec.summary      = "YiHaoSDK iOS"
 
   # This description is used to generate tags and improve search results.
@@ -105,12 +105,11 @@ Pod::Spec.new do |spec|
   #  non-essential files like tests, examples and documentation.
   #
 
-  spec.resource  = "Framework/SDKResources.bundle"
-  # spec.resources = "Resources/*.png"
+  # spec.resource  = "Framework/SDKResources.bundle"
+  spec.resources = ['Framework/SDKResources.bundle','Framework/EAccountOpenPageResource.bundle','Framework/YHYXBundle.bundle']
  
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
-
+ 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  Link your library with frameworks, or libraries. Libraries do not include
@@ -119,31 +118,29 @@ Pod::Spec.new do |spec|
 
   # spec.framework  = "SomeFramework"
   
-spec.frameworks = 'UIKit','Foundation','Photos','CoreText','CoreTelephony','AdSupport','SystemConfiguration','StoreKit','Security'
+  spec.frameworks = 'UIKit','Foundation','Photos','CoreText','CoreTelephony','AdSupport','SystemConfiguration','StoreKit','Security','AppTrackingTransparency','CoreMotion'
 
   # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
-
-
+  spec.libraries = "libz", "libc++", "libresolv", "libsqlite3.0", "libz.1"
+ 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  If your library depends on compiler flags you can set them in the xcconfig hash
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-spec.requires_arc = true
-spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' ,'ENABLE_BITCODE' => 'NO' ,'OTHER_LDFLAGS' => '-lObjC'}
+  spec.requires_arc = true
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' ,'ENABLE_BITCODE' => 'NO' ,'OTHER_LDFLAGS' => '-lObjC'}
  
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
-spec.vendored_frameworks = ['Framework/SDKCore.framework','Framework/XMCommon.framework','Framework/XMGame.framework','Framework/XMLog.framework']
-
-
-spec.dependency "AFNetworking"
-spec.dependency "Masonry"
-spec.dependency "SVProgressHUD"
-spec.dependency "IQKeyboardManager"
-spec.dependency "MJExtension"
+  spec.vendored_frameworks = ['Framework/SDKCore.framework','Framework/XMCommon.framework','Framework/XMGame.framework','Framework/XMLog.framework','Framework/Bugly.framework','Framework/YHYXGameFramework.framework']
+ 
+  spec.dependency "AFNetworking"
+  spec.dependency "Masonry"
+  spec.dependency "SVProgressHUD"
+  spec.dependency "IQKeyboardManager"
+  spec.dependency "MJExtension"
 
 end
