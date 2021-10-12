@@ -105,8 +105,8 @@ Pod::Spec.new do |spec|
   #  non-essential files like tests, examples and documentation.
   #
 
-  spec.resource  = "Framework/SDKResources.bundle"
-  # spec.resources = "Resources/*.png"
+  # spec.resource  = "Framework/SDKResources.bundle"
+  spec.resources = ['Framework/SDKResources.bundle','Framework/EAccountOpenPageResource.bundle','Framework/YHYXBundle.bundle']
  
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -119,10 +119,10 @@ Pod::Spec.new do |spec|
 
   # spec.framework  = "SomeFramework"
   
-spec.frameworks = 'UIKit','Foundation','Photos','CoreText','CoreTelephony','AdSupport','SystemConfiguration','StoreKit','Security'
+  spec.frameworks = 'UIKit','Foundation','Photos','CoreText','CoreTelephony','AdSupport','SystemConfiguration','StoreKit','Security','AppTrackingTransparency','CoreMotion'
 
   # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
+  spec.libraries = "libz", "libc++", "libresolv", "libsqlite3.0", "libz.1"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -137,7 +137,7 @@ spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' 
  
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
-spec.vendored_frameworks = ['Framework/SDKCore.framework','Framework/XMCommon.framework','Framework/XMGame.framework','Framework/XMLog.framework'']
+spec.vendored_frameworks = ['Framework/SDKCore.framework','Framework/XMCommon.framework','Framework/XMGame.framework','Framework/XMLog.framework']
 
 
 spec.dependency "AFNetworking"
