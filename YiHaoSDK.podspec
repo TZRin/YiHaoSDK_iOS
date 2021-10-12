@@ -122,7 +122,7 @@ Pod::Spec.new do |spec|
   spec.frameworks = 'UIKit','Foundation','Photos','CoreText','CoreTelephony','AdSupport','SystemConfiguration','StoreKit','Security','AppTrackingTransparency','CoreMotion'
 
   # spec.library   = "iconv"
-  spec.libraries = "libz", "libc++", "libresolv", "libsqlite3.0", "libz.1"
+  spec.libraries = "z", "c++", "resolv", "sqlite3.0", "z.1"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
