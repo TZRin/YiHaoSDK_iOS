@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <YHYXGameFramework/YHYXGameFramework.h>
+#import "YHSDKPurchaseChannelOrder.h"
 
 @interface YiHaoGamesSDK_Channel : NSObject
 
@@ -15,6 +16,11 @@
 // =====================================================================================
 // ======================================一号游戏渠道=====================================
 // =====================================================================================
+
+/// 本聚合sdk的初始化
+/// @param gameID 聚合sdk的gameid，请咨询项目负责人
+/// @param channelID 聚合sdk的channelID，请咨询项目负责人
+- (void)setupAggregateSDKWithGameID:(NSString *_Nonnull)gameID channelID:(NSString *_Nullable)channelID;
 
 /// YHYX渠道的SDK初始化
 /// @param configModel 配置model
@@ -69,9 +75,9 @@
 /// subject                     // 商品名称（必填）
 /// gameOrderId           // 游戏订单id（必填）
 /// extra                        // 透传参数
-/// @param dict 以上参数
+/// @param order 参数模型,通过[YHSDKPurchaseOrder new]创建
 /// @param complterHander  结果回调
-- (void)YHYX_FullWithDict:(NSDictionary *_Nullable)dict
-           ComplterHander:(nullable void(^)(NSDictionary * _Nonnull response))complterHander;
+- (void)YHYX_FullWithDict:(YHSDKPurchaseChannelOrder *_Nonnull)order
+           ComplterHander:(nullable void(^)(NSDictionary * _Nullable response))complterHander;
 
 @end

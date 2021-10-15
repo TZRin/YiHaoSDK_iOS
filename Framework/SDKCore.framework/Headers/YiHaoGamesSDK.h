@@ -123,18 +123,10 @@ typedef void (^YHSDKPurchaseObserveBlock)(YHSDKPurchaseOrder * order);
 /// @param completeBlock 结果回调
 - (void)purchaseOrder:(YHSDKPurchaseOrder *)order complete:(YHSDKPurchaseResultBlock)completeBlock;
 
-/// 检测支付是否完成
-/// 例如，WY包含：已完成支付，支付遇到问题，等功能的按钮。
-/// 用户点击已完成支付，iOS开发人员调用本方法检查是否完成支付
-/// 如果在WY支付的流程，app至WY之前，需要开发人员在本身app中显示提示页面
+///检测订单是否发货
 /// @param order 待检测的参数模型,需要填写our_tradeNO字段值
 /// @param resultBlock 结果回调
 - (void)validatePurchaseOrderStatus:(YHSDKPurchaseOrder *)order result:(YHSDKPurchaseValidateResultBlock)resultBlock;
 
-/// 若您使用了支付模块,请您在激活SDK后注册该回调,用于第一时间接收数据
-/// 监听已通过验证的订单,可能存在一种已支付但尚未发货的订单,此时需要客户端手动验证该订单是否发货
-/// 若未发货,需要进行发货操作
-/// @param block 订单回调
-- (void)observePurchasedOrder:(YHSDKPurchaseObserveBlock)block;
  
 @end

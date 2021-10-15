@@ -212,6 +212,10 @@
 		<data>
 		bFE90Z8gqSaY2P6iNxO9jQnA+sI=
 		</data>
+		<key>Headers/YHSDKPurchaseChannelOrder.h</key>
+		<data>
+		960aDCXXNgzU++OMwelZOEwGlVY=
+		</data>
 		<key>Headers/YHSDKPurchaseOrder.h</key>
 		<data>
 		eZ+VNMbih40Cf7G3jY45WABTNmY=
@@ -222,11 +226,11 @@
 		</data>
 		<key>Headers/YiHaoGamesSDK.h</key>
 		<data>
-		p9RxVT7fRHSiGETn9gKYEzuvGzY=
+		a0rlNILTcQ0RWMs2g7tXkA8TRhU=
 		</data>
 		<key>Headers/YiHaoGamesSDK_Channel.h</key>
 		<data>
-		ToUvk1dT2nfBHB5MYghnunxRGvk=
+		8dDIQKI/2X2mRM/Bcfm8R9SBADQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -983,6 +987,17 @@
 			kz5Fm/u9iH84/nrgu3MHk97FTRKx81UlZpOhL1m8s/k=
 			</data>
 		</dict>
+		<key>Headers/YHSDKPurchaseChannelOrder.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			960aDCXXNgzU++OMwelZOEwGlVY=
+			</data>
+			<key>hash2</key>
+			<data>
+			FW+0lNLTmyvBk/q1GlhaVdCdLqOc/nZ75TAnntAAeog=
+			</data>
+		</dict>
 		<key>Headers/YHSDKPurchaseOrder.h</key>
 		<dict>
 			<key>hash</key>
@@ -1009,22 +1024,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			p9RxVT7fRHSiGETn9gKYEzuvGzY=
+			a0rlNILTcQ0RWMs2g7tXkA8TRhU=
 			</data>
 			<key>hash2</key>
 			<data>
-			rPr1NBanszriC1tA5NbopH61BST7DdU8wn5PNrBmxyQ=
+			+capgtrY8KsSOueIW+DACVRwtHNORzk5Ts7lBguWdEk=
 			</data>
 		</dict>
 		<key>Headers/YiHaoGamesSDK_Channel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ToUvk1dT2nfBHB5MYghnunxRGvk=
+			8dDIQKI/2X2mRM/Bcfm8R9SBADQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			qhpJ4g6XaNaCg+peYSvwYhhLeMrd7qfTW+voM2d4WRc=
+			TZSSQ4bKQZ0stZybQV6tqBa4fvKy7Qqzc/TurjriEas=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
