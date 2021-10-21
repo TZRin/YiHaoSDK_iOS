@@ -8,7 +8,9 @@
 #import <Foundation/Foundation.h>
 #import <YHYXGameFramework/YHYXGameFramework.h>
 #import "YHSDKPurchaseChannelOrder.h"
-
+#import "YHSDKReportInfo.h"
+#import "YiHaoGamesSDK.h"
+ 
 @interface YiHaoGamesSDK_Channel : NSObject
 
 + (YiHaoGamesSDK_Channel *_Nullable)sharedSDK;
@@ -22,7 +24,7 @@
 /// @param channelID 聚合sdk的channelID，请咨询项目负责人
 - (void)setupAggregateSDKWithGameID:(NSString *_Nonnull)gameID channelID:(NSString *_Nullable)channelID;
 
-/// YHYX渠道的SDK初始化
+/// YHYX渠道的SDK初始化,先调用上面聚合sdk初始化
 /// @param configModel 配置model
 /// @param gameDelegate 回调代理
 - (void)YHYX_SetupWithConfig:(YHYXGameConfigModel *_Nullable)configModel gameDelegate:(nullable id<YHYXGameDelegate>)gameDelegate;
@@ -33,6 +35,39 @@
 /// 未登录:配置使用默认UI：唤起登录UI 、配置不使用默认UI：返回失败信息、需进行登录操作
 /// @param complterHander 结果回调
 - (void)YHYX_LoginViewComplterHander:(nullable void(^)(NSDictionary * _Nullable response))complterHander;
+
+/// YHYX的苹果内购（内购优先判断实名认证状态、未实名认证通过block返回code:-1010，认证中 code:159）
+///  ！！！！！不能以SDK返回的状态作为支付的最终结果，支付的最终结果以服务端为准！！！！！
+///  ！！！！！SDK的回调信息仅作为服务端订单查询参数的回调！！！！！！
+/// productId                  // 商品id（必填）
+/// orderFee                  // 订单金额（单位：分）（必填）
+/// currencyType           // 币种（必填）
+/// roleId                       // SDK提供的用户信息中的userGameId（必填、纯数字）
+/// serverId                   // 游戏区服id（必填）
+/// subject                     // 商品名称（必填）
+/// gameOrderId           // 游戏订单id（必填）
+/// extra                        // 透传参数
+/// @param order 参数模型,通过[YHSDKPurchaseOrder new]创建
+/// @param complterHander  结果回调
+- (void)YHYX_FullWithDict:(YHSDKPurchaseChannelOrder *_Nonnull)order
+           ComplterHander:(nullable void(^)(NSDictionary * _Nullable response))complterHander;
+
+
+/// 上报信息,如角色成功登陆/登出/创建等，只传递当前类型您有且能与参数模型对应的数据，其余数据字段可不传，需要在登录后调用
+/// typedef enum YHSDKReportType {
+///     YHSDKReportTypePlaceHolder        = 0,
+///     YHSDKReportTypeCreateRole         = 1,//创建角色上报
+///     YHSDKReportTypeRoleLogin           = 2,//角色登陆成功上报
+///     YHSDKReportTypeRoleLogout         = 3 //角色成功登出上报
+/// }YHSDKReportType;
+/// @param info 数据模型
+/// @param type 上报类型，参考如上说明
+- (void)uploadPlayerInfo:(YHSDKReportInfo *_Nullable)info type:(YHSDKReportType)type;
+
+
+// =====================================================================================
+// ======================================如下接口可选实现==================================
+// =====================================================================================
 
 /// YHYX的一键登录，自定义UI
 /// 取号完成一键登录
@@ -63,21 +98,5 @@
 /// YHYX的微信登录
 /// @param complterHander 结果回调
 - (void)YHYX_WXLogin:(nullable void(^)(NSDictionary * _Nonnull response))complterHander;
- 
-/// YHYX的苹果内购（内购优先判断实名认证状态、未实名认证通过block返回code:-1010，认证中 code:159）
-///  ！！！！！不能以SDK返回的状态作为支付的最终结果，支付的最终结果以服务端为准！！！！！
-///  ！！！！！SDK的回调信息仅作为服务端订单查询参数的回调！！！！！！
-/// productId                  // 商品id（必填）
-/// orderFee                  // 订单金额（单位：分）（必填）
-/// currencyType           // 币种（必填）
-/// roleId                       // SDK提供的用户信息中的userGameId（必填、纯数字）
-/// serverId                   // 游戏区服id（必填）
-/// subject                     // 商品名称（必填）
-/// gameOrderId           // 游戏订单id（必填）
-/// extra                        // 透传参数
-/// @param order 参数模型,通过[YHSDKPurchaseOrder new]创建
-/// @param complterHander  结果回调
-- (void)YHYX_FullWithDict:(YHSDKPurchaseChannelOrder *_Nonnull)order
-           ComplterHander:(nullable void(^)(NSDictionary * _Nullable response))complterHander;
-
+  
 @end
