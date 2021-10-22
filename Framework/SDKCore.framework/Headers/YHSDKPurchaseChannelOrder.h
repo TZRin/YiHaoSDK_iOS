@@ -40,6 +40,9 @@
 /// 角色等级
 @property (copy, nonatomic) NSString * role_level;
 
+/// userGameId,登录返回的openid
+@property (copy, nonatomic) NSString * userGameId;
+
 /// 透传json
 @property (copy, nonatomic) NSString * userInfo;
 
