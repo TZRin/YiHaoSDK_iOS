@@ -135,10 +135,15 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)YHYX_CertificationWithComplterHander:(nullable void(^)(NSDictionary *response))complterHander;
 
 
+/**
+ * 1.2.5新增开始防沉迷检测，接入防沉迷系统必须调用
+ */
++ (void)YHYX_StartCertification;
+
 #pragma mark -- 内购
  
 /**
- * 苹果内购（内购优先判断实名认证状态、未实名认证通过block返回code:-1010，认证中 code:159）
+ * 应用内购买（内购优先判断实名认证状态、未实名认证通过block返回code:-1010，认证中 code:159）
  * ！！！！！不能以SDK返回的状态作为支付的最终结果，支付的最终结果以服务端为准！！！！！
  *         ！！！！！SDK的回调信息仅作为服务端订单查询参数的回调！！！！！！
  *  productId                   //商品id（必填）
@@ -149,6 +154,9 @@ NS_ASSUME_NONNULL_BEGIN
  *  subject                     //商品名称（必填）
  *  gameOrderId                 //游戏订单id（必填）
  *  extra                       //必填（填写服务器充值成功的回调地址
+ *  fromScheme         //选填，如果使用h5支付则必填,支付宝返回app需要用到
+ *  notPayUI              //选填（1.2.5新增h5支付，默认0，使用UI版，纯函数设为1）
+ *  h5Payway            //选填 （1.2.5新增h5支付，如使用该功能且notPayUI为1，则此参数必填，0为支付宝，1为微信）
  */
 + (void)YHYX_FullWithDict:(NSDictionary *)dict
            ComplterHander:(nullable void(^)(NSDictionary *response))complterHander;
@@ -164,6 +172,23 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)YHYX_RechargeData:(NSInteger)pagenum
            complterHander:(void(^)(NSDictionary *result))complterHander;
+
+
+/**
+ * H5微信支付宝支付（优先判断实名认证状态、未实名认证通过block返回code:-1010，认证中 code:159）
+ * ！！！！！不能以SDK返回的状态作为支付的最终结果，支付的最终结果以服务端为准！！！！！
+ *         ！！！！！SDK的回调信息仅作为服务端订单查询参数的回调！！！！！！
+ *  productId                   //商品id（必填）
+ *  orderFee                    //订单金额（单位：分）（必填）
+ *  currencyType                //币种（必填）
+ *  roleId                      //SDK提供的用户信息中的userGameId（必填、纯数字）
+ *  serverId                    //游戏区服id（必填）
+ *  subject                     //商品名称（必填）
+ *  gameOrderId                 //游戏订单id（必填）
+ *  extra                       //必填（填写服务器充值成功的回调地址
+ */
++ (void)YHYX_PayUIWithDict:(NSDictionary *)dict
+            ComplterHander:(nullable void(^)(NSDictionary *response))complterHander;
 
 
 #pragma mark - 验证码

@@ -74,7 +74,8 @@ typedef NS_ENUM(NSInteger, YHYXSDKRunMode) {
 /// 一键登录的UI配置默认中部弹窗
 @property (nonatomic ,strong) YHYXSecretLoginAuthCfg *secretLoginAuthCfg;
 
-
+/// 游戏scheme配置，用于支付返回
+@property (nonatomic, copy) NSString *gameScheme;
 
 @end
 

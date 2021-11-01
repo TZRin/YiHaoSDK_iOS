@@ -1,6 +1,0 @@
-framework module YHYXGameFramework {
-  umbrella header "YHYXGameFramework.h"
-
-  export *
-  module * { export * }
-}
