@@ -408,6 +408,26 @@
 		<data>
 		sF/EGJN0v4YNkf29hikX/MI2+6c=
 		</data>
+		<key>YHYXBundle.bundle/yhyx_cir_nor@2x.png</key>
+		<data>
+		zVjvXHLakynIJwMlfPyegx0NUUs=
+		</data>
+		<key>YHYXBundle.bundle/yhyx_cir_sel@2x.png</key>
+		<data>
+		TYFDNKdaz+82kxB3pwolI57Vh2Q=
+		</data>
+		<key>YHYXBundle.bundle/yhyx_rt_arrow@2x.png</key>
+		<data>
+		cXG+Qobg5z0kpyuTnUq0E2667ac=
+		</data>
+		<key>YHYXBundle.bundle/yhyx_way_ali@2x.png</key>
+		<data>
+		Hx7paIcX2Px8rRrK1QXQf9XqHuk=
+		</data>
+		<key>YHYXBundle.bundle/yhyx_way_wx@2x.png</key>
+		<data>
+		y0sLS2BSk5iBLuP5lc2WRn/wCuw=
+		</data>
 		<key>build-universal-framework.sh</key>
 		<data>
 		qOkN/u6jzGZftuy5vkzTYP9myDU=
@@ -1513,6 +1533,61 @@
 			<key>hash2</key>
 			<data>
 			iIcHTS8dam8pcwweaAuWL0xK0uTrvgkv50Hv0kHfhHk=
+			</data>
+		</dict>
+		<key>YHYXBundle.bundle/yhyx_cir_nor@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zVjvXHLakynIJwMlfPyegx0NUUs=
+			</data>
+			<key>hash2</key>
+			<data>
+			GkrhHnD+6HeFk8TYER2BAVu1r3FCkboYyDfnXHyQGrM=
+			</data>
+		</dict>
+		<key>YHYXBundle.bundle/yhyx_cir_sel@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TYFDNKdaz+82kxB3pwolI57Vh2Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			beEKbTnEL5Ficv2F0DZw+86XHEugpQg2ePSvr2Mvog0=
+			</data>
+		</dict>
+		<key>YHYXBundle.bundle/yhyx_rt_arrow@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cXG+Qobg5z0kpyuTnUq0E2667ac=
+			</data>
+			<key>hash2</key>
+			<data>
+			SPvitRN+xKptIFeuvZzYLqOcvXdLB2AMT5x/2qURtT4=
+			</data>
+		</dict>
+		<key>YHYXBundle.bundle/yhyx_way_ali@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Hx7paIcX2Px8rRrK1QXQf9XqHuk=
+			</data>
+			<key>hash2</key>
+			<data>
+			OWfJN9piohB2SA5QC7Rfhcve5R8hO5endXgijiyF1II=
+			</data>
+		</dict>
+		<key>YHYXBundle.bundle/yhyx_way_wx@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			y0sLS2BSk5iBLuP5lc2WRn/wCuw=
+			</data>
+			<key>hash2</key>
+			<data>
+			iOwnyPa1Y9kGlcrZYNIeQ70RUxlaXqe8R7Tbk1B4Fcg=
 			</data>
 		</dict>
 		<key>build-universal-framework.sh</key>
